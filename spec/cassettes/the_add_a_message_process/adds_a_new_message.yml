@@ -26,22 +26,20 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 01 Apr 2015 18:44:03 GMT
+      - Wed, 01 Apr 2015 21:00:12 GMT
       X-Powered-By:
       - AT-5000
       X-Shenanigans:
       - none
       Content-Length:
-      - '338'
+      - '215'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"code": 21608, "message": "The number +15034756684 is unverified.
-        Trial accounts cannot send messages to unverified numbers; verify +15034756684
-        at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number
-        to send messages to unverified numbers.", "more_info": "https://www.twilio.com/docs/errors/21608",
-        "status": 400}'
+      string: '{"code": 21606, "message": "The From phone number 5038365278 is not
+        a valid, SMS-capable inbound phone number or short code for your account.",
+        "more_info": "https://www.twilio.com/docs/errors/21606", "status": 400}'
     http_version: 
-  recorded_at: Wed, 01 Apr 2015 18:44:03 GMT
+  recorded_at: Wed, 01 Apr 2015 21:00:12 GMT
 recorded_with: VCR 2.9.3

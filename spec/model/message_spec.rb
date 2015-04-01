@@ -4,6 +4,7 @@ describe Message, vcr: true do
   it { should validate_presence_of :body }
   it { should validate_presence_of :to }
   it { should validate_presence_of :from }
+  it { should belong_to :contact }
 
   it "doesn't save the message if twilio gives an error" do
     message = FactoryGirl.build(:message, to: '1111111')
