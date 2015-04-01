@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://<twilio account sid>:<twilio auth token>@api.twilio.com/2010-04-01/Accounts/<twilio
+      account sid>/Messages.json
+    body:
+      encoding: US-ASCII
+      string: Body=hi&To=5034756684&From=5038365278
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '37'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 01 Apr 2015 18:44:03 GMT
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '338'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"code": 21608, "message": "The number +15034756684 is unverified.
+        Trial accounts cannot send messages to unverified numbers; verify +15034756684
+        at twilio.com/user/account/phone-numbers/verified, or purchase a Twilio number
+        to send messages to unverified numbers.", "more_info": "https://www.twilio.com/docs/errors/21608",
+        "status": 400}'
+    http_version: 
+  recorded_at: Wed, 01 Apr 2015 18:44:03 GMT
+recorded_with: VCR 2.9.3

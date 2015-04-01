@@ -1,0 +1,8 @@
+<h3>Sent Messages:</h3>
+
+<ul id="all_messages">
+  <%= render @messages %>
+</ul>
+
+<br>
+<%= link_to "Send New Message", new_message_path, class: "btn btn-info"%>
