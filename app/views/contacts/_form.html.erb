@@ -1,0 +1,21 @@
+<%= render 'layouts/errors', object: @contact %>
+
+<div class="row">
+  <div class='col-md-6'>
+    <%= form_for @contact do |f| %>
+      <div class='form-group'>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name, class: 'form-control' %>
+      </div>
+      <div class='form-group'>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, class: 'form-control' %>
+      </div>
+      <div class='form-group'>
+        <%= f.label :phone_number %>
+        <%= f.text_area :phone_number, class: 'form-control' %>
+      </div>
+      <%= f.submit class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+</div>
