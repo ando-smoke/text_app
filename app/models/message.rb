@@ -6,6 +6,10 @@ class Message < ActiveRecord::Base
 
   before_create :send_message
 
+  def display_sender
+    contact.nil? ? to : contact.first_name + ' ' + contact.last_name
+  end
+
   private
 
     def send_message

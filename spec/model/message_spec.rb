@@ -16,4 +16,11 @@ describe Message, vcr: true do
     message.save
     message.errors.messages[:base].should eq ["The 'To' number 1111111 is not a valid phone number."]
   end
+
+  it "should display the contact's first and last name if a message has" \
+    " a contact" do
+    contact = FactoryGirl.create(:contact)
+    message = FactoryGirl.create(:message, contact_id: contact.id)
+    expect(message.display_sender).to eq(contact.first_name + ' ' + contact.last_name)
+  end
 end
