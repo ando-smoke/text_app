@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
   end
 
   def new
-    @message = Message.new(to: params[:to])
+    @message = Message.new(to: params[:to], contact_id: params[:contact_id])
   end
 
   def create
@@ -19,6 +19,6 @@ class MessagesController < ApplicationController
 
 private
   def message_params
-    params.require(:message).permit(:body, :to, :from)
+    params.require(:message).permit(:body, :to, :from, :contact_id)
   end
 end
