@@ -4,7 +4,7 @@
   <div class='col-md-6'>
     <%= form_for @message do |f| %>
       <%= f.hidden_field :contact_id,
-        value: @message.contact_id %>
+        value: @sent_message.contact_id %>
       <div class='form-group'>
         <%= f.label :to %>
         <%= f.text_field :to, class: 'form-control' %>

@@ -1,1 +1,9 @@
-<li>From: <%= message.from %> | To: <%= message.display_sender %> | Message: <%= message.body  %></li>
+<li>From: <%= message.from %> | To:
+  <% message.sent_messages.each_with_index do |recipient, i| %>
+    <% if i == 0 %>
+      <%= recipient.display_recipient %>
+    <% else %>
+      , <%= recipient.display_recipient %>
+    <% end %>
+  <% end %>
+  | Message: <%= message.body  %></li>
